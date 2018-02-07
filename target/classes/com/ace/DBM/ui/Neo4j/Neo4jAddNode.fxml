@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ace.DBM.controller.Neo4j.Neo4jAddNodeController">
+	<children>
+		<TextField fx:id="main_left_addnode_label_name" layoutX="300.0" layoutY="54.0" />
+		<TableView fx:id="main_left_addnode_properties" editable="true" layoutX="300.0" layoutY="150.0" prefHeight="250.0" prefWidth="400.0">
+			<columns>
+				<TableColumn fx:id="main_left_addnode_properties_name" maxWidth="125.0" minWidth="125.0" onEditCommit="#saveKey" prefWidth="125.0" text="属性名" />
+				<TableColumn fx:id="main_left_addnode_properties_value" maxWidth="125.0" minWidth="125.0" onEditCommit="#saveValue" prefWidth="125.0" text="属性值" />
+			</columns>
+		</TableView>
+		<Button fx:id="main_left_addnode_add_properties" layoutX="300.0" layoutY="101.0" mnemonicParsing="false" onAction="#addProperties" text="增加属性" />
+		<TableView layoutX="44.0" layoutY="150.0" prefHeight="250.0" prefWidth="190.0">
+			<columns>
+				<TableColumn maxWidth="1.7976931348623157E308" prefWidth="190.0" text="C1" />
+			</columns>
+		</TableView>
+		<Label layoutX="233.0" layoutY="58.0" text="标签名称" />
+		<Button layoutX="250.0" layoutY="227.0" mnemonicParsing="false" text="&gt;&gt;" />
+		<Button layoutX="250.0" layoutY="335.0" mnemonicParsing="false" text="&lt;&lt;" />
+		<Button fx:id="main_left_addnode_add_save" layoutX="247.0" layoutY="432.0" mnemonicParsing="false" onAction="#saveNode" text="保存" />
+	</children>
+</AnchorPane>

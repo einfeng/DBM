@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane fx:id="main_pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ace.DBM.controller.Neo4j.Neo4jController">
+   <bottom>
+      <ProgressBar maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="-Infinity" progress="0.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <right>
+      <ListView onMouseClicked="#mouseClick" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </right>
+   <top>
+      <VBox prefHeight="37.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+              <items>
+                <Button mnemonicParsing="false" text="Button" />
+              </items>
+            </ToolBar>
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <VBox fx:id="main_left_pane" prefHeight="524.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TreeView fx:id="main_left_tree" onMouseClicked="#mouseClick" prefHeight="524.0" prefWidth="189.0" VBox.vgrow="ALWAYS">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem fx:id="left_tree_menuitem_create" mnemonicParsing="false" onAction="#addNode" text="新增节点" visible="false" />
+                        <MenuItem fx:id="left_tree_menuitem_query" mnemonicParsing="false" onAction="#queryNode" text="查询节点" visible="false" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TreeView>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <TabPane fx:id="main_center_tabpane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="ALL_TABS" tabMinWidth="100.0" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab closable="false" text="查询">
+               <content>
+                  <VBox prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <TextArea prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                        <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                     </children>
+                  </VBox>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

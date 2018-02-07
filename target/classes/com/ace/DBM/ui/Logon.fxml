@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ace.DBM.controller.LogonController">
+   <children>
+      <ChoiceBox fx:id="logon_db_type" layoutX="50.0" layoutY="60.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="logon_db_conn" layoutX="50.0" layoutY="140.0" prefWidth="150.0" />
+      <TextField fx:id="logon_db_user" layoutX="280.0" layoutY="60.0" />
+      <TextField fx:id="logon_db_password" layoutX="280.0" layoutY="140.0" />
+      <Label layoutX="50.0" layoutY="40.0" text="数据库类型" />
+      <Label layoutX="50.0" layoutY="120.0" text="数据库连接" />
+      <Label layoutX="280.0" layoutY="40.0" text="用户名" />
+      <Label layoutX="280.0" layoutY="120.0" text="密码" />
+      <Button fx:id="logon_db_logon" layoutX="160.0" layoutY="200.0" mnemonicParsing="false" text="登录" />
+      <Button fx:id="logon_db_exit" layoutX="280.0" layoutY="200.0" mnemonicParsing="false" text="取消" />
+   </children>
+</AnchorPane>

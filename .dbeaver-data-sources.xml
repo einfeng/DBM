@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="derby-1616a62794c-143bb56724dfef15" provider="generic" driver="derby" name="Derby - DBMDataBase" save-password="true" show-system-objects="true" read-only="false">
+		<connection server="" database="D:\workspace\DBM\DBMDataBase" url="jdbc:derby:D:\workspace\DBM\DBMDataBase" type="dev">
+			<bootstrap txnIsolation="2"/>
+		</connection>
+	</data-source>
+	<filters/>
+</data-sources>

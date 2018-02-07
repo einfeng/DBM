@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ace.DBM.controller.Neo4j.Neo4jQueryNodeController">
+	<children>
+		<TableView fx:id="main_left_querynode_properties" editable="true" layoutX="285.0" layoutY="117.0" prefHeight="250.0" prefWidth="400.0">
+			<columns>
+				<TableColumn fx:id="main_left_querynode_properties_name" maxWidth="125.0" minWidth="125.0" prefWidth="125.0" text="属性名" />
+				<TableColumn fx:id="main_left_querynode_properties_value" minWidth="125.0" prefWidth="125.0" text="属性值" />
+			</columns>
+		</TableView>
+		<Label layoutX="107.0" layoutY="52.0" text="标签名称" />
+      <Label fx:id="LabelName" layoutX="174.0" layoutY="52.0" prefHeight="15.0" prefWidth="160.0" text="标签名称" />
+      <TreeView fx:id="main_left_querynode_node" layoutX="55.0" layoutY="117.0" onMouseClicked="#queryNode" prefHeight="250.0" prefWidth="150.0" />
+	</children>
+</AnchorPane>
